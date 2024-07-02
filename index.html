@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIEM Frontend</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>SIEM</h1>
+    </div>
+    <div class="main-container">
+        <div class="grid-container">
+            <div class="grid-item upload-section">
+                <button onclick="uploadPcap()">Upload PCAP File</button>
+            </div>
+            <div class="grid-item visualization-section">
+                <h2>Visualization</h2>
+                <button onclick="visualizeData()">Visualize</button>
+                <div id="visualizationResult"></div>
+            </div>
+            <style>
+                div {
+                  width: 300px;
+                  border: 5px black;
+                  padding: 50px;
+                  margin: 20px;
+                }
+            </style>
+           <div class="grid-item anomaly-section">
+                <h2>Anomaly Detection</h2>
+                <button onclick="detectAnomalies()">Detect Anomalies</button>
+                <div id="Choose your ML Model"></div>
+            </div> 
+            <div class="grid-item other-section">
+                <h2>Anomaly Detection</h2>
+                <button onclick="detectAnomalies()">Detect Anomalies</button>
+                <div id="anomalyResult"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
